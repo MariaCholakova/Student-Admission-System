@@ -1,0 +1,191 @@
+body{
+    box-sizing: border-box;
+    background-image: url("../images/education.png");
+    height: 700px;
+    width: 100%;
+    
+}
+
+*{
+    display: inline-block;
+}
+
+header{
+    box-shadow: 5px 5px #14BBB3;
+    margin: 0.8em 9em;
+    border-radius: 15px;
+    height: 10%;
+    width: 80%;
+    background-color: white;
+}
+
+main{
+    box-shadow: 5px 5px #14BBB3;
+    border-radius: 15px;
+    margin: 1.5em 9em;
+    height: 83%;
+    width: 80%;
+    background-color:#F5F5F5;
+}
+
+
+#logo{
+    height: 69px;
+    margin-left: 1em;
+    margin-right: 0.7em;
+}
+
+header>h1{
+    font-size: 2.5em;
+    position: relative;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    bottom: 24px;
+    color:#14BBB3;
+    text-shadow: 1.5px 1.5px black;
+}
+
+header>button{
+    left: 190px;
+    top: -24px;
+    position: relative;
+    margin: 0em !important;
+ 
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #14BBB3;
+    border-radius: 10px;
+}
+
+a{
+    text-shadow: 1.5px 1.5px black;
+    text-decoration: none;
+    color:white;
+    font-size:2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav>ul>li{
+    cursor: pointer;
+    height: 100%;
+    border-left: 3px solid white;
+    width:32%;
+    text-align: center;
+    padding-top: 0.4em;  
+}
+
+nav>ul>li:first-child{
+    border-left:none;
+}
+
+
+nav>ul{
+    height: 100%;
+    width: 100%;
+}
+
+nav>ul>li:hover{
+    font-weight: bold;
+}
+
+section{
+    width: 95%;
+    margin:1em auto;
+}
+.studentsTable, tbody{
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+
+tr{
+    display: block;
+}
+
+td, th{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1.4em;
+    text-align: center;
+    width: 16%;
+}
+
+.addStudent{
+    width: 90%;
+    margin:0em 3em;
+    height: 400px;
+}
+
+.addStudent input[type=text], .addStudent select{
+    width: 320px;
+    display: block;
+    margin: 1em 3em 1em 0em;
+    height: 40px;
+    text-indent: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 3px 3px gray;
+    
+
+}
+
+#nationality{
+    display: none;
+}
+
+
+
+.addStudent>div{
+    width: 100%;
+    height: 100%;
+}
+
+.addStudent>div:nth-of-type(1){
+    width: 90%;
+    margin: 0em 6em;
+}
+
+.addStudent div>div{
+    width: 49%;
+    height: 100%;
+}
+
+.addStudent div>div:last-of-type{
+    float:right;
+}
+
+.addStudent div{
+    clear: none;
+}
+
+
+
+.addStudent button{
+    margin: 0em 0em 0em 4.5em;
+    height: 46px;
+}
+
+.addStudent button:nth-of-type(2){
+    float: right;
+}
+
+
+#bachelor, #master{
+    display: none;
+}
+
+#bachelor input, #master input{
+    margin:0em;
+}
+ol>li{
+    height:23%;
+}
+
+#program{
+    display: none;
+}

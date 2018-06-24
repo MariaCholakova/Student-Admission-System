@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <title>Система за класиране на кандидат студенти</title> -->
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <script src="javascript/students.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" id='logo'>
+        <h1>Система за кандидат-студенти</h1>
+        <button class="button">Изход</button>
+    </header>
+
+    <main>
+        <nav>
+            <ul>
+                <li>
+                    <a>Добави кандидат</a>
+                </li>
+                <li>
+                    <a onclick="onload=loadStudents()">Класиране</a>
+                </li>
+                <li>
+                    <a>Информация</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+           
+            <form action="" class="addStudent">
+                    <div>
+
+                    <div>
+                            <input type="text" placeholder="Име, Презиме, Фамилия">
+                            <input type="text" placeholder="ЕГН">
+                            <input type="text" placeholder="Адрес">
+                            <input type="text" placeholder="Имейл адрес">
+
+                    </div>
+                    <div>
+                            <input type="text" placeholder="Оценка от матура">
+                            <input type="text" placeholder="Оценка от изпит">
+                            <select name="" id="">
+                                    <option value="">Гражданство</option>
+                                    <option value="">Българско</option>
+                                    <option value="">Турско</option>
+                                    <option value="">Руско</option>
+                                    <option value="">Английско</option>
+                                    <option value="">Испанско</option>
+                                    <option value="">Германско</option>
+                                    <option value="">Друго</option>
+                                </select>
+                                <input type="text" placeholder="Въведете гражданство" id="nationality"> 
+                                <button class="button forward">Напред</button>
+                    </div>
+                    
+                        
+                    </div>
+
+                    <div id="program">
+                            <div>
+                                    <button class="button" id='bachelorButton'>Бакалавър</button>
+                                    <button class="button" id='masterButton'>Магистър</button>
+                            </div>
+        
+                            <div id="bachelor">
+                                <p>Моля, подредете специалностите по приоритет: </p>
+                                <ol>
+                                    <li><label for="first">1 <input type="text" id='first' placeholder="Първо желание..."></label><input type="radio" name="form" value="regular">Редовна
+                                        <input type="radio" name="form" value="notregular">Задочна</li>
+                                    <li><label for="first">2 <input type="text" id='second' placeholder="Второ желание..."></label><input type="radio" name="form" value="regular">Редовна
+                                        <input type="radio" name="form" value="notregular">Задочна</li>
+                                    <li><label for="first">3 <input type="text" id='third' placeholder="Трето желание..."></label><input type="radio" name="form" value="regular">Редовна
+                                        <input type="radio" name="form" value="notregular">Задочна</li>
+                                    <li><label for="first">4 <input type="text" id='forth' placeholder="Четвърто желание..."></label><input type="radio" name="form" value="regular">Редовна
+                                        <input type="radio" name="form" value="notregular">Задочна</li>
+                                </ol>
+                                <button class="button forward">Назад</button>
+                                <button class="button add">Напред</button>
+                            </div>
+        
+
+                    </div>
+                    
+                    <div id='master'>
+                      <input type="text" placeholder="master">  
+                      <button class="button add">Добави</button>
+                    </div>    
+            </form>
+
+
+        </section>
+
+    </main>
+
+    <script>
+    </script>
+</body>
+
+</html>
