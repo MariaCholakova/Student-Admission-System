@@ -23,10 +23,10 @@
         <nav>
             <ul>
                 <li>
-                    <a>Добави кандидат</a>
+                    <a onclick="add()">Добави кандидат</a>
                 </li>
                 <li>
-                    <a onclick="onload=loadStudents()">Класиране</a>
+                    <a onclick="loadStudents()">Класиране</a>
                 </li>
                 <li>
                     <a>Информация</a>
@@ -35,66 +35,370 @@
         </nav>
 
         <section>
-           
+            <div>
+                
+            </div>
             <form action="" class="addStudent">
-                    <div>
+                <div>
 
                     <div>
-                            <input type="text" placeholder="Име, Презиме, Фамилия">
-                            <input type="text" placeholder="ЕГН">
-                            <input type="text" placeholder="Адрес">
-                            <input type="text" placeholder="Имейл адрес">
+                        <input type="text" placeholder="Име, Презиме, Фамилия">
+                        <input type="text" placeholder="ЕГН">
+                        <input type="text" placeholder="Адрес">
+                        <input type="text" placeholder="Телефонен номер">
+
 
                     </div>
                     <div>
-                            <input type="text" placeholder="Оценка от матура">
-                            <input type="text" placeholder="Оценка от изпит">
-                            <select name="" id="">
-                                    <option value="">Гражданство</option>
-                                    <option value="">Българско</option>
-                                    <option value="">Турско</option>
-                                    <option value="">Руско</option>
-                                    <option value="">Английско</option>
-                                    <option value="">Испанско</option>
-                                    <option value="">Германско</option>
-                                    <option value="">Друго</option>
-                                </select>
-                                <input type="text" placeholder="Въведете гражданство" id="nationality"> 
-                                <button class="button forward">Напред</button>
+                        <input type="text" placeholder="Имейл адрес">
+                        <input type="text" placeholder="Оценка от матура">
+                        <input type="text" placeholder="Оценка от изпит">
+
+                        <button class="button forward">Напред</button>
                     </div>
-                    
-                        
+                </div>
+
+                <div id="program">
+                    <div>
+                        <ul>
+                            <li>
+
+                                <a id="bachelorButton">
+                                    <label class="container">Бакалавър
+                                        <input type="radio" name="program" checked="checked" value="b">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="masterButton">
+                                    <label class="container">Магистър
+                                        <input type="radio" name="program" value="m">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
 
-                    <div id="program">
-                            <div>
-                                    <button class="button" id='bachelorButton'>Бакалавър</button>
-                                    <button class="button" id='masterButton'>Магистър</button>
-                            </div>
-        
-                            <div id="bachelor">
-                                <p>Моля, подредете специалностите по приоритет: </p>
-                                <ol>
-                                    <li><label for="first">1 <input type="text" id='first' placeholder="Първо желание..."></label><input type="radio" name="form" value="regular">Редовна
-                                        <input type="radio" name="form" value="notregular">Задочна</li>
-                                    <li><label for="first">2 <input type="text" id='second' placeholder="Второ желание..."></label><input type="radio" name="form" value="regular">Редовна
-                                        <input type="radio" name="form" value="notregular">Задочна</li>
-                                    <li><label for="first">3 <input type="text" id='third' placeholder="Трето желание..."></label><input type="radio" name="form" value="regular">Редовна
-                                        <input type="radio" name="form" value="notregular">Задочна</li>
-                                    <li><label for="first">4 <input type="text" id='forth' placeholder="Четвърто желание..."></label><input type="radio" name="form" value="regular">Редовна
-                                        <input type="radio" name="form" value="notregular">Задочна</li>
-                                </ol>
-                                <button class="button forward">Назад</button>
-                                <button class="button add">Напред</button>
-                            </div>
-        
+                    <div id="bachelor">
+                        <p>Бакалавърски програми</p>
 
+                        <table>
+                            <tr>
+                                <th>Специалност</th>
+                                <th>Форма на обучение</th>
+                                <th>Вид поръчка</th>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Първо желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+
+                                    <label class="container">Редовна
+                                        <input type="radio" name="firstForm" value="regular" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">Задочна
+                                        <input type="radio" name="firstForm" value="notregular">
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                                </td>
+                                <td>
+                                        <label class="container">Държавна
+                                                <input type="radio" name="secondForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Платена
+                                                <input type="radio" name="secondForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Второ желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+
+                                        <label class="container">Редовна
+                                                <input type="radio" name="secondForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Задочна
+                                                <input type="radio" name="secondForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+
+                                </td>
+                                <td>
+                                        <label class="container">Държавна
+                                                <input type="radio" name="forthForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Платена
+                                                <input type="radio" name="forthForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Трето желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+
+                                        <label class="container">Редовна
+                                                <input type="radio" name="thirdForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Задочна
+                                                <input type="radio" name="thirdForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                                <td>
+                                        <label class="container">Държавна
+                                                <input type="radio" name="program" value="m" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Платена
+                                                <input type="radio" name="program" value="m">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Четвърто желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+
+                                        <label class="container">Редовна
+                                                <input type="radio" name="forthForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Задочна
+                                                <input type="radio" name="forthForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+
+                                </td>
+                                <td>
+                                        <label class="container">Държавна
+                                                <input type="radio" name="program" value="m" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Платена
+                                                <input type="radio" name="program" value="m">
+                                                <span class="checkmark"></span>
+                                            </label>
+
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="button forward">Назад</button>
+                        <button class="button add">Напред</button>
                     </div>
-                    
+
                     <div id='master'>
-                      <input type="text" placeholder="master">  
-                      <button class="button add">Добави</button>
-                    </div>    
+                        <p>Магистърски програми</p>
+
+                        <table>
+                            <tr>
+                                <th>Специалност</th>
+                                <th>Форма на обучение</th>
+                                <th>Вид поръчка</th>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Първо желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+
+                                        <label class="container">Редовна
+                                                <input type="radio" name="firstForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Задочна
+                                                <input type="radio" name="firstForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                                <td>
+                                        <label class="container">Държавна
+                                                <input type="radio" name="program" value="m" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Платена
+                                                <input type="radio" name="program" value="m">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Първо желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+                                        <label class="container">Редовна
+                                                <input type="radio" name="secondForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Задочна
+                                                <input type="radio" name="secondForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                                <td>
+                                        <label class="container">Държавна
+                                                <input type="radio" name="program" value="m" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Платена
+                                                <input type="radio" name="program" value="m">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Първо желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+                                        <label class="container">Редовна
+                                                <input type="radio" name="thirdForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Задочна
+                                                <input type="radio" name="thirdForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                                <td>
+                                        <label class="container">Държавна
+                                                <input type="radio" name="program" value="m" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Платена
+                                                <input type="radio" name="program" value="m">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <select name="" id="">
+                                        <option value="si">Първо желание</option>
+                                        <option value="si">Софтуерно инженерство</option>
+                                        <option value="kn">Компютърни науки</option>
+                                        <option value="is">Информационни системи</option>
+                                        <option value="math">Математика</option>
+                                        <option value="pmath">Приложна математика</option>
+                                        <option value="info">Информатика</option>
+                                    </select>
+                                </td>
+                                <td>
+                                        <label class="container">Редовна
+                                                <input type="radio" name="forthForm" value="regular" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Задочна
+                                                <input type="radio" name="forthForm" value="notregular">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                </td>
+                                <td>
+                                    <label class="container">Държавна
+                                        <input type="radio" name="program" value="m" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">Платена
+                                        <input type="radio" name="program" value="m">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="button forward">Назад</button>
+                        <button class="button add">Напред</button>
+                    </div>
+
+                </div>
             </form>
 
 

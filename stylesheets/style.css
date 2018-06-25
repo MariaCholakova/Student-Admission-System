@@ -69,7 +69,7 @@ a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav>ul>li{
+nav>ul>li, #program ul>li{
     cursor: pointer;
     height: 100%;
     border-left: 3px solid white;
@@ -78,12 +78,17 @@ nav>ul>li{
     padding-top: 0.4em;  
 }
 
+#program ul>li{
+    width:49% !important;
+    border-left: none;
+}
+
 nav>ul>li:first-child{
     border-left:none;
 }
 
 
-nav>ul{
+nav>ul, #program ul{
     height: 100%;
     width: 100%;
 }
@@ -96,7 +101,7 @@ section{
     width: 95%;
     margin:1em auto;
 }
-.studentsTable, tbody{
+.studentsTable{
     width: 100%;
     border: 1px solid black;
 }
@@ -134,13 +139,30 @@ td, th{
 
 }
 
+#program>div:first-child{
+    height: 53px;
+    width: 100%;
+    background-color: white;
+}
+
+#program>div li a{
+    color:#00A29C
+    ;
+}
+
+#program>div li a:hover{
+    font-weight: bold;
+    color:#37C6C1;
+}
+
+
 #nationality{
     display: none;
 }
 
 
 
-.addStudent>div{
+.addStudent>div, #bachelor, #master{
     width: 100%;
     height: 100%;
 }
@@ -175,7 +197,7 @@ td, th{
 }
 
 
-#bachelor, #master{
+#master{
     display: none;
 }
 
@@ -183,9 +205,134 @@ td, th{
     margin:0em;
 }
 ol>li{
-    height:23%;
+    padding: 0.5em;
+    height: 57px;
+    width: 100%;
 }
 
 #program{
     display: none;
 }
+
+#bachelor p, #master p{
+    font-size: 1.5em;
+    margin: 0.3em 0.8em;
+}
+
+#bachelor select, #master select{
+    margin:0em;
+    display: inline-block;
+}
+
+#bachelor div, #master div{
+    margin:0em 1em;
+}
+
+#bachelor table, tbody, #master table, tbody{
+    width: 100%;
+}
+
+#bachelor th, #bachelor td,#master th, #master td{
+    width: 33%;
+    margin: 0.5em 0em
+
+}
+
+#bachelor input[type=radio], #master input[type=radio]{
+    width: 22px;
+    height: 22px;
+}
+
+
+#bachelor p, #master p{
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#2085FF;
+}
+
+#bachelor tr:first-child, #master tr:first-child{
+    background-color: #2085FF;
+    color:white;
+}
+
+#bachelor table, #master table{
+    margin:0.5em 0em;
+    border:1px solid #2085FF;
+}
+
+#bachelor button, #master button{
+    margin: 0.9em 0em 0em 0.5em;
+    height: 46px;
+}
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  table .container{
+      display: inline;
+  }

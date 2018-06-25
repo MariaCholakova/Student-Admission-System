@@ -1,15 +1,25 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    document.getElementById("bachelorButton").addEventListener("click", function(){
+    document.querySelector(".addStudent>div:first-child button").addEventListener("click", function(){
         event.preventDefault();
+        this.parentNode.parentNode.style.display="none";
+        document.getElementById("program").style.display="inline-block";  
+    })
+
+
+    document.getElementById("bachelorButton").addEventListener("click", function(){
      document.getElementById("bachelor").style.display="inline-block";
      document.getElementById("master").style.display="none";
     });
     document.getElementById("masterButton").addEventListener("click", function(){
-        event.preventDefault();
         document.getElementById("master").style.display="inline-block";
         document.getElementById("bachelor").style.display="none";
     });
+
+
+    document.querySelectorAll("select").forEach(s=>s.addEventListener("click", function(){
+        this.children[0].setAttribute("disabled", "true");
+    }));
 
 
 });
@@ -47,3 +57,7 @@ function loadStudents() {
 }
  
 
+function add(){
+   document.getElementById("addStudent").style.display="inline-block";
+    
+}
