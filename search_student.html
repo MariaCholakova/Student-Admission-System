@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <title>Система за класиране на кандидат студенти</title> -->
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/search_field.css">
+    <script src="javascript/students.js"></script>
+</head>
+
+<body>
+     <header>
+        <img src="images/logo.png" alt="logo" id='logo'>
+        <h1>Търси кандидат-студент</h1>
+    </header>
+    <button class="top-right" onclick="window.location.href='admin_profile.php'">Назад</button>
+     <div class="container">
+        <div class="search-container">
+            <form action="search_student.php" method="GET">
+                <input class='centered' type="text" placeholder="ЕГН на студента..." name="egn"/>
+                <input class="icon" type="image" name="submit" src="images/search.png" alt="Submit" />
+            </form>
+        <div>
+     </div>
+    
+</body>
+</html>

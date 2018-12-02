@@ -1,0 +1,20 @@
+
+
+.search-container input{
+    border: solid rgb(8, 91, 142);
+    border-radius: 5px;
+    text-indent: 1em;
+    font-size: 18px;
+    width: 350px;
+    height: 40px;
+    margin:0 auto;
+}
+
+.search-container .icon {
+        border: solid rgb(8, 91, 142);
+        border-radius: 5px;
+        background:white;
+        padding:5px;
+        width:35px;
+        height:34px;
+}
